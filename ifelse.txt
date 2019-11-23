@@ -1,0 +1,7 @@
+if
+num1 > num2
+then
+sum = sum + num1;
+else
+sum = sum + num2;
+endif

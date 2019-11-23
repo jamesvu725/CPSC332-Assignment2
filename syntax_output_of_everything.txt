@@ -1,0 +1,242 @@
+
+Token: Keyword 	Lexeme: begin
+<Statement> -> <Assignment Statement> | <Declarative Statement> | if <Conditional> then <Statement> else <Statement> endif | if <Conditional> then <Statement> endif | begin <Statement> <MoreStatements> end | while <Conditional> do <Statement> whileend
+
+Token: Keyword 	Lexeme: int
+<Statement> -> <Assignment Statement> | <Declarative Statement> | if <Conditional> then <Statement> else <Statement> endif | if <Conditional> then <Statement> endif | begin <Statement> <MoreStatements> end | while <Conditional> do <Statement> whileend
+<Declarative Statement> -> <Type> <Identifier> <MoreIDs>;
+<Type> -> int | float | bool
+
+Token: Identifier 	Lexeme: sum
+
+Token: Separator 	Lexeme: ,
+<MoreIDs> -> , <Identifier> <MoreIDs> | Epsilon
+
+Token: Identifier 	Lexeme: num1
+
+Token: Separator 	Lexeme: ,
+<MoreIDs> -> , <Identifier> <MoreIDs> | Epsilon
+
+Token: Identifier 	Lexeme: num2
+
+Token: Separator 	Lexeme: ;
+<MoreIDs> -> , <Identifier> <MoreIDs> | Epsilon
+
+Token: Separator 	Lexeme: ;
+<MoreStatements> -> ; <Statement> <More Statements | epsilon
+
+Token: Keyword 	Lexeme: float
+<Statement> -> <Assignment Statement> | <Declarative Statement> | if <Conditional> then <Statement> else <Statement> endif | if <Conditional> then <Statement> endif | begin <Statement> <MoreStatements> end | while <Conditional> do <Statement> whileend
+<Declarative Statement> -> <Type> <Identifier> <MoreIDs>;
+<Type> -> int | float | bool
+
+Token: Identifier 	Lexeme: product
+
+Token: Separator 	Lexeme: ,
+<MoreIDs> -> , <Identifier> <MoreIDs> | Epsilon
+
+Token: Identifier 	Lexeme: num3
+
+Token: Separator 	Lexeme: ,
+<MoreIDs> -> , <Identifier> <MoreIDs> | Epsilon
+
+Token: Identifier 	Lexeme: num4
+
+Token: Separator 	Lexeme: ;
+<MoreIDs> -> , <Identifier> <MoreIDs> | Epsilon
+
+Token: Separator 	Lexeme: ;
+<MoreStatements> -> ; <Statement> <More Statements | epsilon
+
+Token: Keyword 	Lexeme: bool
+<Statement> -> <Assignment Statement> | <Declarative Statement> | if <Conditional> then <Statement> else <Statement> endif | if <Conditional> then <Statement> endif | begin <Statement> <MoreStatements> end | while <Conditional> do <Statement> whileend
+<Declarative Statement> -> <Type> <Identifier> <MoreIDs>;
+<Type> -> int | float | bool
+
+Token: Identifier 	Lexeme: truth
+
+Token: Separator 	Lexeme: ,
+<MoreIDs> -> , <Identifier> <MoreIDs> | Epsilon
+
+Token: Identifier 	Lexeme: lie
+
+Token: Separator 	Lexeme: ;
+<MoreIDs> -> , <Identifier> <MoreIDs> | Epsilon
+
+Token: Separator 	Lexeme: ;
+<MoreStatements> -> ; <Statement> <More Statements | epsilon
+
+Token: Identifier 	Lexeme: sum
+<Statement> -> <Assignment Statement> | <Declarative Statement> | if <Conditional> then <Statement> else <Statement> endif | if <Conditional> then <Statement> endif | begin <Statement> <MoreStatements> end | while <Conditional> do <Statement> whileend
+<Assignment Statement> -> <Identifier> = <Expression>;
+
+Token: Operator 	Lexeme: =
+
+Token: Identifier 	Lexeme: num1
+<Expression> -> <Term> <ExpressionPrime>
+<Term> -> <Factor> <TermPrime>
+<Factor> -> ( <Expression> ) | <Identifier> | <Number>
+
+Token: Operator 	Lexeme: +
+<ExpressionPrime> -> + <Expression> | - <Expression> | Epsilon
+
+Token: Identifier 	Lexeme: num2
+<Expression> -> <Term> <ExpressionPrime>
+<Term> -> <Factor> <TermPrime>
+<Factor> -> ( <Expression> ) | <Identifier> | <Number>
+
+Token: Separator 	Lexeme: ;
+
+Token: Separator 	Lexeme: ;
+<MoreStatements> -> ; <Statement> <More Statements | epsilon
+
+Token: Identifier 	Lexeme: product
+<Statement> -> <Assignment Statement> | <Declarative Statement> | if <Conditional> then <Statement> else <Statement> endif | if <Conditional> then <Statement> endif | begin <Statement> <MoreStatements> end | while <Conditional> do <Statement> whileend
+<Assignment Statement> -> <Identifier> = <Expression>;
+
+Token: Operator 	Lexeme: =
+
+Token: Separator 	Lexeme: (
+<Expression> -> <Term> <ExpressionPrime>
+<Term> -> <Factor> <TermPrime>
+<Factor> -> ( <Expression> ) | <Identifier> | <Number>
+
+Token: Identifier 	Lexeme: num3
+<Expression> -> <Term> <ExpressionPrime>
+<Term> -> <Factor> <TermPrime>
+<Factor> -> ( <Expression> ) | <Identifier> | <Number>
+
+Token: Operator 	Lexeme: /
+<TermPrime> -> * <Term> | / <Term> | Epsilon
+
+Token: Identifier 	Lexeme: num4
+<Term> -> <Factor> <TermPrime>
+<Factor> -> ( <Expression> ) | <Identifier> | <Number>
+
+Token: Separator 	Lexeme: )
+
+Token: Operator 	Lexeme: *
+<TermPrime> -> * <Term> | / <Term> | Epsilon
+
+Token: Separator 	Lexeme: (
+<Term> -> <Factor> <TermPrime>
+<Factor> -> ( <Expression> ) | <Identifier> | <Number>
+
+Token: Identifier 	Lexeme: num1
+<Expression> -> <Term> <ExpressionPrime>
+<Term> -> <Factor> <TermPrime>
+<Factor> -> ( <Expression> ) | <Identifier> | <Number>
+
+Token: Operator 	Lexeme: +
+<ExpressionPrime> -> + <Expression> | - <Expression> | Epsilon
+
+Token: Identifier 	Lexeme: num2
+<Expression> -> <Term> <ExpressionPrime>
+<Term> -> <Factor> <TermPrime>
+<Factor> -> ( <Expression> ) | <Identifier> | <Number>
+
+Token: Separator 	Lexeme: )
+
+Token: Separator 	Lexeme: ;
+
+Token: Separator 	Lexeme: ;
+<MoreStatements> -> ; <Statement> <More Statements | epsilon
+
+Token: Keyword 	Lexeme: if
+
+Token: Identifier 	Lexeme: sum
+<Conditional> -> <Expression> <RelationalOperator> <Expression> | <Expression>
+<Expression> -> <Term> <ExpressionPrime>
+<Term> -> <Factor> <TermPrime>
+<Factor> -> ( <Expression> ) | <Identifier> | <Number>
+
+Token: Operator 	Lexeme: >
+<RelationalOperator> -> < | <= | == | <> | >= | >
+
+Token: Operator 	Lexeme: =
+
+Token: Identifier 	Lexeme: product
+<Expression> -> <Term> <ExpressionPrime>
+<Term> -> <Factor> <TermPrime>
+<Factor> -> ( <Expression> ) | <Identifier> | <Number>
+
+Token: Keyword 	Lexeme: then
+
+Token: Identifier 	Lexeme: sum
+<Statement> -> <Assignment Statement> | <Declarative Statement> | if <Conditional> then <Statement> else <Statement> endif | if <Conditional> then <Statement> endif | begin <Statement> <MoreStatements> end | while <Conditional> do <Statement> whileend
+<Assignment Statement> -> <Identifier> = <Expression>;
+
+Token: Operator 	Lexeme: =
+
+Token: Identifier 	Lexeme: product
+<Expression> -> <Term> <ExpressionPrime>
+<Term> -> <Factor> <TermPrime>
+<Factor> -> ( <Expression> ) | <Identifier> | <Number>
+
+Token: Separator 	Lexeme: ;
+
+Token: Keyword 	Lexeme: else
+
+Token: Identifier 	Lexeme: product
+<Statement> -> <Assignment Statement> | <Declarative Statement> | if <Conditional> then <Statement> else <Statement> endif | if <Conditional> then <Statement> endif | begin <Statement> <MoreStatements> end | while <Conditional> do <Statement> whileend
+<Assignment Statement> -> <Identifier> = <Expression>;
+
+Token: Operator 	Lexeme: =
+
+Token: Identifier 	Lexeme: sum
+<Expression> -> <Term> <ExpressionPrime>
+<Term> -> <Factor> <TermPrime>
+<Factor> -> ( <Expression> ) | <Identifier> | <Number>
+
+Token: Separator 	Lexeme: ;
+
+Token: Keyword 	Lexeme: endif
+
+Token: Separator 	Lexeme: ;
+<MoreStatements> -> ; <Statement> <More Statements | epsilon
+
+Token: Keyword 	Lexeme: while
+
+Token: Identifier 	Lexeme: sum
+<Conditional> -> <Expression> <RelationalOperator> <Expression> | <Expression>
+<Expression> -> <Term> <ExpressionPrime>
+<Term> -> <Factor> <TermPrime>
+<Factor> -> ( <Expression> ) | <Identifier> | <Number>
+
+Token: Operator 	Lexeme: >
+<RelationalOperator> -> < | <= | == | <> | >= | >
+
+Token: Identifier 	Lexeme: product
+<Expression> -> <Term> <ExpressionPrime>
+<Term> -> <Factor> <TermPrime>
+<Factor> -> ( <Expression> ) | <Identifier> | <Number>
+
+Token: Keyword 	Lexeme: do
+
+Token: Identifier 	Lexeme: sum
+<Statement> -> <Assignment Statement> | <Declarative Statement> | if <Conditional> then <Statement> else <Statement> endif | if <Conditional> then <Statement> endif | begin <Statement> <MoreStatements> end | while <Conditional> do <Statement> whileend
+<Assignment Statement> -> <Identifier> = <Expression>;
+
+Token: Operator 	Lexeme: =
+
+Token: Identifier 	Lexeme: sum
+<Expression> -> <Term> <ExpressionPrime>
+<Term> -> <Factor> <TermPrime>
+<Factor> -> ( <Expression> ) | <Identifier> | <Number>
+
+Token: Operator 	Lexeme: -
+<ExpressionPrime> -> + <Expression> | - <Expression> | Epsilon
+
+Token: Integer 	Lexeme: 1
+<Expression> -> <Term> <ExpressionPrime>
+<Term> -> <Factor> <TermPrime>
+<Factor> -> ( <Expression> ) | <Identifier> | <Number>
+
+Token: Separator 	Lexeme: ;
+
+Token: Keyword 	Lexeme: whileend
+<MoreStatements> -> ; <Statement> <More Statements | epsilon
+
+Token: Keyword 	Lexeme: end
+Syntax is correct.
+

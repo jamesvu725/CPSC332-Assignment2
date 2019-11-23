@@ -1,0 +1,15 @@
+Tokens		Lexemes
+Identifier 	sum
+Operator 	=
+Separator 	(
+Identifier 	num1
+Operator 	*
+Identifier 	num2
+Separator 	)
+Operator 	+
+Identifier 	num3
+Operator 	-
+Identifier 	num4
+Operator 	/
+Identifier 	num5
+Separator 	;

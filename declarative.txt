@@ -1,0 +1,7 @@
+begin
+int sum, num1, num2;
+;
+bool bool1, bool2;
+;
+float num3, num4;
+end

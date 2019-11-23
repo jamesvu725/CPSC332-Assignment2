@@ -1,0 +1,14 @@
+Tokens		Lexemes
+Keyword 	if
+Identifier 	num1
+Operator 	>
+Operator 	=
+Identifier 	num2
+Keyword 	then
+Identifier 	sum
+Operator 	=
+Identifier 	sum
+Operator 	+
+Identifier 	num1
+Separator 	;
+Keyword 	endif

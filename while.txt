@@ -1,0 +1,5 @@
+while
+num1 > num2
+do
+num1 = num1 + 1;
+whileend

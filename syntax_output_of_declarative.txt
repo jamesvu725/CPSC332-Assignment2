@@ -1,0 +1,64 @@
+
+Token: Keyword 	Lexeme: begin
+<Statement> -> <Assignment Statement> | <Declarative Statement> | if <Conditional> then <Statement> else <Statement> endif | if <Conditional> then <Statement> endif | begin <Statement> <MoreStatements> end
+
+Token: Keyword 	Lexeme: int
+<Statement> -> <Assignment Statement> | <Declarative Statement> | if <Conditional> then <Statement> else <Statement> endif | if <Conditional> then <Statement> endif | begin <Statement> <MoreStatements> end
+<Declarative Statement> -> <Type> <Identifier> <MoreIDs>;
+<Type> -> int | float | bool
+
+Token: Identifier 	Lexeme: sum
+
+Token: Separator 	Lexeme: ,
+<MoreIDs> -> , <Identifier> <MoreIDs> | Epsilon
+
+Token: Identifier 	Lexeme: num1
+
+Token: Separator 	Lexeme: ,
+<MoreIDs> -> , <Identifier> <MoreIDs> | Epsilon
+
+Token: Identifier 	Lexeme: num2
+
+Token: Separator 	Lexeme: ;
+<MoreIDs> -> , <Identifier> <MoreIDs> | Epsilon
+
+Token: Separator 	Lexeme: ;
+<MoreStatements> -> ; <Statement> <More Statements | epsilon
+
+Token: Keyword 	Lexeme: bool
+<Statement> -> <Assignment Statement> | <Declarative Statement> | if <Conditional> then <Statement> else <Statement> endif | if <Conditional> then <Statement> endif | begin <Statement> <MoreStatements> end
+<Declarative Statement> -> <Type> <Identifier> <MoreIDs>;
+<Type> -> int | float | bool
+
+Token: Identifier 	Lexeme: bool1
+
+Token: Separator 	Lexeme: ,
+<MoreIDs> -> , <Identifier> <MoreIDs> | Epsilon
+
+Token: Identifier 	Lexeme: bool2
+
+Token: Separator 	Lexeme: ;
+<MoreIDs> -> , <Identifier> <MoreIDs> | Epsilon
+
+Token: Separator 	Lexeme: ;
+<MoreStatements> -> ; <Statement> <More Statements | epsilon
+
+Token: Keyword 	Lexeme: float
+<Statement> -> <Assignment Statement> | <Declarative Statement> | if <Conditional> then <Statement> else <Statement> endif | if <Conditional> then <Statement> endif | begin <Statement> <MoreStatements> end
+<Declarative Statement> -> <Type> <Identifier> <MoreIDs>;
+<Type> -> int | float | bool
+
+Token: Identifier 	Lexeme: num3
+
+Token: Separator 	Lexeme: ,
+<MoreIDs> -> , <Identifier> <MoreIDs> | Epsilon
+
+Token: Identifier 	Lexeme: num4
+
+Token: Separator 	Lexeme: ;
+<MoreIDs> -> , <Identifier> <MoreIDs> | Epsilon
+<MoreStatements> -> ; <Statement> <More Statements | epsilon
+
+Token: Keyword 	Lexeme: end
+Syntax is correct.
+

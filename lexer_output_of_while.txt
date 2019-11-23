@@ -1,0 +1,13 @@
+Tokens		Lexemes
+Keyword 	while
+Identifier 	num1
+Operator 	>
+Identifier 	num2
+Keyword 	do
+Identifier 	num1
+Operator 	=
+Identifier 	num1
+Operator 	+
+Integer 	1
+Separator 	;
+Keyword 	whileend

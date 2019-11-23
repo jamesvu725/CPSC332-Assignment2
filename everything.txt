@@ -1,0 +1,23 @@
+begin
+int sum, num1, num2;
+;
+float product, num3, num4;
+;
+bool truth, lie;
+;
+sum = num1 + num2;
+;
+product = (num3 / num4) * (num1 + num2);
+;
+if sum >= product
+then
+sum = product;
+else
+product = sum;
+endif
+;
+while sum > product
+do
+sum = sum - 1;
+whileend
+end
