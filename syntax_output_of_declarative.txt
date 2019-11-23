@@ -1,9 +1,9 @@
 
 Token: Keyword 	Lexeme: begin
-<Statement> -> <Assignment Statement> | <Declarative Statement> | if <Conditional> then <Statement> else <Statement> endif | if <Conditional> then <Statement> endif | begin <Statement> <MoreStatements> end
+<Statement> -> <Assignment Statement> | <Declarative Statement> | if <Conditional> then <Statement> else <Statement> endif | if <Conditional> then <Statement> endif | begin <Statement> <MoreStatements> end | while <Conditional> do <Statement> whileend
 
 Token: Keyword 	Lexeme: int
-<Statement> -> <Assignment Statement> | <Declarative Statement> | if <Conditional> then <Statement> else <Statement> endif | if <Conditional> then <Statement> endif | begin <Statement> <MoreStatements> end
+<Statement> -> <Assignment Statement> | <Declarative Statement> | if <Conditional> then <Statement> else <Statement> endif | if <Conditional> then <Statement> endif | begin <Statement> <MoreStatements> end | while <Conditional> do <Statement> whileend
 <Declarative Statement> -> <Type> <Identifier> <MoreIDs>;
 <Type> -> int | float | bool
 
@@ -26,7 +26,7 @@ Token: Separator 	Lexeme: ;
 <MoreStatements> -> ; <Statement> <More Statements | epsilon
 
 Token: Keyword 	Lexeme: bool
-<Statement> -> <Assignment Statement> | <Declarative Statement> | if <Conditional> then <Statement> else <Statement> endif | if <Conditional> then <Statement> endif | begin <Statement> <MoreStatements> end
+<Statement> -> <Assignment Statement> | <Declarative Statement> | if <Conditional> then <Statement> else <Statement> endif | if <Conditional> then <Statement> endif | begin <Statement> <MoreStatements> end | while <Conditional> do <Statement> whileend
 <Declarative Statement> -> <Type> <Identifier> <MoreIDs>;
 <Type> -> int | float | bool
 
@@ -44,7 +44,7 @@ Token: Separator 	Lexeme: ;
 <MoreStatements> -> ; <Statement> <More Statements | epsilon
 
 Token: Keyword 	Lexeme: float
-<Statement> -> <Assignment Statement> | <Declarative Statement> | if <Conditional> then <Statement> else <Statement> endif | if <Conditional> then <Statement> endif | begin <Statement> <MoreStatements> end
+<Statement> -> <Assignment Statement> | <Declarative Statement> | if <Conditional> then <Statement> else <Statement> endif | if <Conditional> then <Statement> endif | begin <Statement> <MoreStatements> end | while <Conditional> do <Statement> whileend
 <Declarative Statement> -> <Type> <Identifier> <MoreIDs>;
 <Type> -> int | float | bool
 

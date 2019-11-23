@@ -1,6 +1,5 @@
 
 Token: Keyword 	Lexeme: if
-<Statement> -> <Assignment Statement> | <Declarative Statement> | if <Conditional> then <Statement> else <Statement> endif | if <Conditional> then <Statement> endif | begin <Statement> <MoreStatements> end
 
 Token: Identifier 	Lexeme: num1
 <Conditional> -> <Expression> <RelationalOperator> <Expression> | <Expression>
@@ -19,6 +18,7 @@ Token: Identifier 	Lexeme: num2
 Token: Keyword 	Lexeme: then
 
 Token: Identifier 	Lexeme: sum
+<Statement> -> <Assignment Statement> | <Declarative Statement> | if <Conditional> then <Statement> else <Statement> endif | if <Conditional> then <Statement> endif | begin <Statement> <MoreStatements> end | while <Conditional> do <Statement> whileend
 <Assignment Statement> -> <Identifier> = <Expression>;
 
 Token: Operator 	Lexeme: =
@@ -37,11 +37,11 @@ Token: Identifier 	Lexeme: num1
 <Factor> -> ( <Expression> ) | <Identifier> | <Number>
 
 Token: Separator 	Lexeme: ;
-<Statement> -> <Assignment Statement> | <Declarative Statement> | if <Conditional> then <Statement> else <Statement> endif | if <Conditional> then <Statement> endif | begin <Statement> <MoreStatements> end
 
 Token: Keyword 	Lexeme: else
 
 Token: Identifier 	Lexeme: sum
+<Statement> -> <Assignment Statement> | <Declarative Statement> | if <Conditional> then <Statement> else <Statement> endif | if <Conditional> then <Statement> endif | begin <Statement> <MoreStatements> end | while <Conditional> do <Statement> whileend
 <Assignment Statement> -> <Identifier> = <Expression>;
 
 Token: Operator 	Lexeme: =
