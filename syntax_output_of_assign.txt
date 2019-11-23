@@ -1,8 +1,7 @@
 
 Token: Identifier 	Lexeme: sum
-<Statement> -> <Assignment Statement> | <Declarative Statement> | if <Conditional> then <Statement> else <Statement> endif | if <Conditional> then <Statement> endif | begin <Statement> <MoreStatements> end
-
-<Assignment Statement> -> <Identifier> = <Expression>
+<Statement> -> <Assignment Statement> | <Declarative Statement> | if <Conditional> then <Statement> else <Statement> endif | if <Conditional> then <Statement> endif | begin <Statement> <MoreStatements> end | while <Conditional> do <Statement> whileend
+<Assignment Statement> -> <Identifier> = <Expression>;
 
 Token: Operator 	Lexeme: =
 
